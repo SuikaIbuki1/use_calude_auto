@@ -1,0 +1,26 @@
+# Hybrid task template - Web search
+name: "Web Search"
+description: "Open browser, search for information"
+mode: "hybrid"
+
+steps:
+  # Open browser (predefined step)
+  - action: hotkey
+    keys: ["win", "r"]
+    description: "Open Run dialog"
+    delay: 1.0
+  
+  - action: type_text
+    text: "chrome"
+    description: "Type browser name"
+    delay: 0.5
+  
+  - action: press_key
+    key: "enter"
+    description: "Open browser"
+    delay: 3.0
+
+# AI will handle the search and interaction
+ai_fallback:
+  description: "Search for 'Python automation tutorial' and find the best result"
+  max_iterations: 15

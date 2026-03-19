@@ -1,0 +1,48 @@
+# Simple task template - Open Notepad and type text
+name: "Open Notepad and Type"
+description: "Open Windows Notepad and type a message"
+mode: "predefined"
+
+steps:
+  # Open Run dialog
+  - action: hotkey
+    keys: ["win", "r"]
+    description: "Open Run dialog"
+    delay: 1.0
+  
+  # Type notepad
+  - action: type_text
+    text: "notepad"
+    description: "Type 'notepad'"
+    delay: 0.5
+  
+  # Press Enter
+  - action: press_key
+    key: "enter"
+    description: "Press Enter to open Notepad"
+    delay: 2.0
+  
+  # Type message
+  - action: type_text
+    text: "Hello from AI Auto Operator!"
+    description: "Type message in Notepad"
+    delay: 1.0
+  
+  # Save file
+  - action: hotkey
+    keys: ["ctrl", "s"]
+    description: "Save file"
+    delay: 1.0
+  
+  # Type filename
+  - action: type_text
+    text: "test_output.txt"
+    description: "Type filename"
+    delay: 0.5
+  
+  # Press Enter to save
+  - action: press_key
+    key: "enter"
+    description: "Confirm save"
+    retry: 2
+    on_error: "abort"

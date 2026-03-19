@@ -1,0 +1,46 @@
+# AI Auto Operator Configuration
+
+# General Settings
+general:
+  language: "zh_CN"
+  log_level: "INFO"
+  log_file: "logs/ai_auto_operator.log"
+
+# Mouse Controller Settings
+mouse:
+  safety_delay: 0.1
+  move_duration: 0.5
+  fail_safe: true
+
+# Keyboard Controller Settings
+keyboard:
+  typing_speed: 0.05
+  safety_delay: 0.1
+  fail_safe: true
+
+# Screen Recognition Settings
+recognition:
+  confidence_threshold: 0.8
+  ocr_backend: "tesseract"  # 'tesseract' or 'easyocr'
+  ocr_language: "chi_sim+eng"  # Chinese + English
+
+# AI Engine Settings
+ai:
+  provider: "openai"  # 'openai' or 'anthropic'
+  model: "gpt-4-vision-preview"
+  api_key: "${OPENAI_API_KEY}"  # Use environment variable
+  temperature: 0.7
+  max_tokens: 1024
+  confidence_threshold: 0.7
+
+# Task Execution Settings
+execution:
+  default_timeout: 30.0
+  default_retries: 3
+  step_delay: 0.5
+
+# Paths
+paths:
+  task_templates: "config/task_templates"
+  screenshots: "screenshots"
+  logs: "logs"

@@ -1,0 +1,16 @@
+# AI-assisted task template - Send email
+name: "Send Email"
+description: "Open email client and send a message"
+mode: "ai_assisted"
+
+# AI will analyze the screen and decide actions
+max_iterations: 20
+
+# Context for AI
+context: |
+  You need to send an email with the following details:
+  - To: example@email.com
+  - Subject: Test Email
+  - Body: This is a test email sent by AI Auto Operator.
+  
+  Please compose the email and send it.
