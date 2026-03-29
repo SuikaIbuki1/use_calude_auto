@@ -8,8 +8,8 @@ from PIL import Image
 from loguru import logger
 
 from .ai_client import AIClient
-from ..recognizers.screen_capture import ScreenCapture
-from ..recognizers.ocr_recognizer import OCRRecognizer
+from recognizers.screen_capture import ScreenCapture
+from recognizers.ocr_recognizer import OCRRecognizer
 
 
 class DecisionEngine:

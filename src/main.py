@@ -3,11 +3,18 @@ AI Auto Operator - Main Entry Point
 Intelligent mouse and keyboard automation system
 """
 
+import sys
+import io
 import click
 import os
 from pathlib import Path
 from loguru import logger
 from dotenv import load_dotenv
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 from controllers import MouseController, KeyboardController
 from recognizers import ScreenCapture, ImageMatcher, OCRRecognizer

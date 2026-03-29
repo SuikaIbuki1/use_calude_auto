@@ -6,12 +6,12 @@ import time
 from typing import Dict, Any, Optional, List
 from loguru import logger
 
-from .task_parser import TaskParser
-from .step_runner import StepRunner
-from ..controllers.mouse_controller import MouseController
-from ..controllers.keyboard_controller import KeyboardController
-from ..ai_engine.decision_engine import DecisionEngine
-from ..recognizers.screen_capture import ScreenCapture
+from task_engine.task_parser import TaskParser
+from task_engine.step_runner import StepRunner
+from controllers.mouse_controller import MouseController
+from controllers.keyboard_controller import KeyboardController
+from ai_engine.decision_engine import DecisionEngine
+from recognizers.screen_capture import ScreenCapture
 
 
 class TaskExecutor:

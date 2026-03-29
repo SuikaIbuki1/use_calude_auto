@@ -6,8 +6,8 @@ import time
 from typing import Dict, Any, Optional
 from loguru import logger
 
-from ..controllers.mouse_controller import MouseController
-from ..controllers.keyboard_controller import KeyboardController
+from controllers.mouse_controller import MouseController
+from controllers.keyboard_controller import KeyboardController
 
 
 class StepRunner:

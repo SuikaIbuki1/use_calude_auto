@@ -68,23 +68,23 @@ cp .env.example .env
 ### 基础使用
 
 ```bash
-# 进入 src 目录
-cd src
+# 从项目根目录运行(推荐,避免相对导入错误)
+python run.py test
 
-# 测试控制器
-python main.py test
+# 或在 Windows 上使用批处理脚本
+run.bat test
 
 # 截屏
-python main.py screen
+python run.py screen
 
 # 执行预定义任务
-python main.py run ../config/task_templates/example_predefined.yaml
+python run.py run config/task_templates/example_predefined.yaml
 
 # AI 辅助执行
-python main.py ask "打开浏览器并搜索 Python 教程"
+python run.py ask "打开浏览器并搜索 Python 教程"
 
 # 查找图像
-python main.py find path/to/image.png
+python run.py find path/to/image.png
 ```
 
 ---
